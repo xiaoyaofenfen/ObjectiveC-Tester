@@ -9,33 +9,86 @@
 #import "Fraction.h"
 
 @implementation Fraction
+
+@synthesize numerator, denominator;
+
+-(void) print: (BOOL) showReduce;
 {
-    int numerator;
-    int denominator;
+    Fraction *f = [Fraction new];
+    f.numerator = numerator;
+    f.denominator = denominator;
+    if(showReduce)
+    {
+        [f reduce];
+    }
+    NSLog(@"%d / %d", f.numerator, f.denominator);
 }
 
+-(void) reduce
+{
+    int u = numerator;
+    int v = denominator;
+    int temp = -1;;
 
--(void) setNumerator: (int) n
-{
-    numerator = n;
-}
--(void) setDenominator: (int) d
-{
-    denominator = d;
+    if(v != 0)
+    {
+        while (temp != 0) {
+            temp = u % v;
+            u = v;
+            v = temp;
+        }
+    }
+
+    numerator /= u;
+    denominator /= u;
 }
 
--(int) numerator
+// a / b + c / d = (ad + cb) / bd
+-(Fraction *) add: (Fraction *) f
 {
-    return numerator;
-}
--(int) denominator
-{
-    return denominator;
+    Fraction *result = [Fraction new];
+
+    result.numerator = numerator * f.denominator + f.numerator * denominator;
+    result.denominator = f.denominator * denominator;
+    [result reduce];
+
+    return result;
 }
 
--(void) print
+// a / b - c / d = (ad - cb) / bd
+-(Fraction *) subtract: (Fraction *) f
 {
-    NSLog(@"%d / %d", numerator, denominator);
+    Fraction *result = [Fraction new];
+    result.numerator = numerator * f.denominator - f.numerator * denominator;
+    result.denominator = f.denominator * denominator;
+    [result reduce];
+
+    return result;
 }
+
+// (a / b) * (c / d) = ac / bd
+-(Fraction *) multiply: (Fraction *) f
+{
+    Fraction *result = [Fraction new];
+
+    result.numerator = f.numerator * numerator;
+    result.denominator = f.denominator * denominator;
+    [result reduce];
+
+    return result;
+}
+
+// (a / b) / (c / d) = ad / bc
+-(Fraction *) divide: (Fraction *) f
+{
+    Fraction *result = [Fraction new];
+
+    result.numerator = numerator * f.denominator;
+    result.denominator = denominator * f.numerator;
+    [result reduce];
+
+    return result;
+}
+
 
 @end

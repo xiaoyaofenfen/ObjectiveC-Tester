@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F5E5E571D748800009A5196 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E5E561D748800009A5196 /* Calculator.m */; };
+		8F754A521D7728A200F2935D /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F754A511D7728A200F2935D /* Complex.m */; };
 		8F837B6F1D73249E00726CDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F837B6E1D73249E00726CDD /* main.m */; };
 		8F837B771D732FF400726CDD /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F837B761D732FF400726CDD /* Fraction.m */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		8F5E5E551D748800009A5196 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		8F5E5E561D748800009A5196 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		8F754A501D7728A200F2935D /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		8F754A511D7728A200F2935D /* Complex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
 		8F837B6B1D73249E00726CDD /* ObjectiveC Tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ObjectiveC Tester"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F837B6E1D73249E00726CDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F837B751D732FF400726CDD /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				8F837B761D732FF400726CDD /* Fraction.m */,
 				8F5E5E551D748800009A5196 /* Calculator.h */,
 				8F5E5E561D748800009A5196 /* Calculator.m */,
+				8F754A501D7728A200F2935D /* Complex.h */,
+				8F754A511D7728A200F2935D /* Complex.m */,
 			);
 			path = "ObjectiveC Tester";
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F754A521D7728A200F2935D /* Complex.m in Sources */,
 				8F5E5E571D748800009A5196 /* Calculator.m in Sources */,
 				8F837B6F1D73249E00726CDD /* main.m in Sources */,
 				8F837B771D732FF400726CDD /* Fraction.m in Sources */,
