@@ -24,6 +24,15 @@
     denominator = d;
 }
 
+-(int) numerator
+{
+    return numerator;
+}
+-(int) denominator
+{
+    return denominator;
+}
+
 -(void) print
 {
     NSLog(@"%d / %d", numerator, denominator);

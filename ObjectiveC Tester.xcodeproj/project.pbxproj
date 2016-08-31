@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F5E5E571D748800009A5196 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E5E561D748800009A5196 /* Calculator.m */; };
 		8F837B6F1D73249E00726CDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F837B6E1D73249E00726CDD /* main.m */; };
 		8F837B771D732FF400726CDD /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F837B761D732FF400726CDD /* Fraction.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F5E5E551D748800009A5196 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		8F5E5E561D748800009A5196 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		8F837B6B1D73249E00726CDD /* ObjectiveC Tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ObjectiveC Tester"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F837B6E1D73249E00726CDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F837B751D732FF400726CDD /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				8F837B6E1D73249E00726CDD /* main.m */,
 				8F837B751D732FF400726CDD /* Fraction.h */,
 				8F837B761D732FF400726CDD /* Fraction.m */,
+				8F5E5E551D748800009A5196 /* Calculator.h */,
+				8F5E5E561D748800009A5196 /* Calculator.m */,
 			);
 			path = "ObjectiveC Tester";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5E5E571D748800009A5196 /* Calculator.m in Sources */,
 				8F837B6F1D73249E00726CDD /* main.m in Sources */,
 				8F837B771D732FF400726CDD /* Fraction.m in Sources */,
 			);
@@ -245,6 +251,7 @@
 				8F837B741D73249E00726CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
