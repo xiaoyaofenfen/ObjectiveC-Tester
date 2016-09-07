@@ -12,6 +12,8 @@
 
 @property int real, image;
 
+-(id) initReal: (int) r andImage: (int) i;
+
 -(void) print;
 
 -(Complex *) add: (Complex *) complexNum;

@@ -16,8 +16,14 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Programing is fun!");
 
+        typedef enum {Sunday, Monday, Tuesday, Wendesday, Thursday, Friday, Saturday} Day;
 
-        Fraction *frac1 = [[Fraction alloc] init];
+        Day today = Wendesday;
+        NSLog(@"today is : %u", today);
+
+        typedef Fraction *FractionObj;
+
+        FractionObj frac1 = [[Fraction alloc] init];
         frac1.numerator = 1;
         frac1.denominator = 4;
 //        [frac1 setNumerator:1];
@@ -39,6 +45,9 @@ int main(int argc, const char * argv[]) {
         t.denominator = 4;
         [t print:YES];
         [t print:NO];
+
+        //[frac1 add:frac2];
+        NSLog(@"the add function invoked count : %d", [frac1 invokeCountOfAdd]);
 
         Calculator *calc = [[Calculator alloc] init];
         [calc setAccumulator:0];
@@ -64,6 +73,9 @@ int main(int argc, const char * argv[]) {
 
         c3 = [c1 add:c2];
 
+        [c3 print];
+
+        c3 = [[Complex alloc] initReal:2 andImage:4];
         [c3 print];
 
 

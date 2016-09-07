@@ -8,6 +8,8 @@
 
 #import "Fraction.h"
 
+static int gInvokeCountOfAdd = 0; // 只允许本文件访问的全局变量
+
 @implementation Fraction
 
 @synthesize numerator, denominator;
@@ -22,6 +24,11 @@
         [f reduce];
     }
     NSLog(@"%d / %d", f.numerator, f.denominator);
+}
+
+-(int) invokeCountOfAdd
+{
+    return gInvokeCountOfAdd;
 }
 
 -(void) reduce
@@ -46,6 +53,8 @@
 // a / b + c / d = (ad + cb) / bd
 -(Fraction *) add: (Fraction *) f
 {
+    gInvokeCountOfAdd++;
+
     Fraction *result = [Fraction new];
 
     result.numerator = numerator * f.denominator + f.numerator * denominator;

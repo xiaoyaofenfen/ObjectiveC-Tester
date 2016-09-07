@@ -14,6 +14,7 @@
 
 -(void) print: (BOOL) showReduce;
 -(void) reduce;
+-(int) invokeCountOfAdd;
 
 -(Fraction *) add: (Fraction *) f;
 -(Fraction *) subtract: (Fraction *) f;

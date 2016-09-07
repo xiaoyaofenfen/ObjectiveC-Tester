@@ -12,6 +12,18 @@
 
 @synthesize real, image;
 
+-(id) initReal: (int) r andImage: (int) i
+{
+    self = [super init];
+    if(self)
+    {
+        self.real = r;
+        self.image = i;
+    }
+
+    return self;
+}
+
 -(void) print
 {
     NSLog(@"%d + %di", real, image);
