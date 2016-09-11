@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
+#import "FractionMathOps.h"
+#import "FractionComparison.h"
 #import "Calculator.h"
 #import "Complex.h"
 
@@ -48,6 +50,20 @@ int main(int argc, const char * argv[]) {
 
         //[frac1 add:frac2];
         NSLog(@"the add function invoked count : %d", [frac1 invokeCountOfAdd]);
+
+        Fraction *f = [frac1 invert];
+        [f print:YES];
+
+
+        NSLog(@"%d/%d compare %d/%d is: %d", frac1.numerator, frac1.denominator,
+              frac2.numerator, frac2.denominator,
+              [frac1 compare:frac2]);
+
+        id<NSComparisonMethods> fcm = frac2;
+        NSLog(@"%d/%d isLessThanOrEqualTo %d/%d is: %d", frac1.numerator, frac1.denominator,
+              frac2.numerator, frac2.denominator,
+              [frac1 isLessThanOrEqualTo:fcm]);
+
 
         Calculator *calc = [[Calculator alloc] init];
         [calc setAccumulator:0];
