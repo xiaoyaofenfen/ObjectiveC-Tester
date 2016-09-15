@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4243261D8AA53D008C2A5B /* FunctionLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F4243241D8AA53D008C2A5B /* FunctionLib.c */; };
+		8F4243291D8AC83E008C2A5B /* MyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4243281D8AC83E008C2A5B /* MyDate.m */; };
 		8F5E5E571D748800009A5196 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E5E561D748800009A5196 /* Calculator.m */; };
 		8F754A521D7728A200F2935D /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F754A511D7728A200F2935D /* Complex.m */; };
 		8F79B4311D850C920057D54C /* FractionMathOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B4301D850C920057D54C /* FractionMathOps.m */; };
@@ -28,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F4243241D8AA53D008C2A5B /* FunctionLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FunctionLib.c; sourceTree = "<group>"; };
+		8F4243251D8AA53D008C2A5B /* FunctionLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionLib.h; sourceTree = "<group>"; };
+		8F4243271D8AC83E008C2A5B /* MyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDate.h; sourceTree = "<group>"; };
+		8F4243281D8AC83E008C2A5B /* MyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDate.m; sourceTree = "<group>"; };
 		8F5E5E551D748800009A5196 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		8F5E5E561D748800009A5196 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		8F754A501D7728A200F2935D /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				8F837B6E1D73249E00726CDD /* main.m */,
+				8F4243271D8AC83E008C2A5B /* MyDate.h */,
+				8F4243281D8AC83E008C2A5B /* MyDate.m */,
+				8F4243241D8AA53D008C2A5B /* FunctionLib.c */,
+				8F4243251D8AA53D008C2A5B /* FunctionLib.h */,
 				8F837B751D732FF400726CDD /* Fraction.h */,
 				8F837B761D732FF400726CDD /* Fraction.m */,
 				8F5E5E551D748800009A5196 /* Calculator.h */,
@@ -150,7 +160,9 @@
 				8F79B4341D850E620057D54C /* FractionComparison.m in Sources */,
 				8F837B6F1D73249E00726CDD /* main.m in Sources */,
 				8F837B771D732FF400726CDD /* Fraction.m in Sources */,
+				8F4243261D8AA53D008C2A5B /* FunctionLib.c in Sources */,
 				8F79B4311D850C920057D54C /* FractionMathOps.m in Sources */,
+				8F4243291D8AC83E008C2A5B /* MyDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

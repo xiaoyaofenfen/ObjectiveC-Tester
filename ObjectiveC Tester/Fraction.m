@@ -45,7 +45,10 @@ static int gInvokeCountOfAdd = 0; // 只允许本文件访问的全局变量
             v = temp;
         }
     }
-
+    if(u == 0)
+    {
+        return ;
+    }
     numerator /= u;
     denominator /= u;
 }

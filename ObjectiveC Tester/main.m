@@ -12,6 +12,24 @@
 #import "FractionComparison.h"
 #import "Calculator.h"
 #import "Complex.h"
+#import "FunctionLib.h"
+#import "MyDate.h"
+
+Fraction* sumOfFraction(Fraction **data, int count)
+{
+    Fraction *sum = [Fraction alloc];
+    sum.numerator = 0;
+    sum.denominator = 1;
+
+    if(data)
+    {
+        for (int index = 0; index < count; index++) {
+            sum = [sum add:*(data + index)];
+        }
+    }
+
+    return sum;
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -64,6 +82,12 @@ int main(int argc, const char * argv[]) {
               frac2.numerator, frac2.denominator,
               [frac1 isLessThanOrEqualTo:fcm]);
 
+        NSLog(@"the size of Fraction is: %lu", sizeof(frac1));
+
+
+        Fraction *fdata[3] = {frac1, frac2, fracResult};
+        Fraction *sum = sumOfFraction(&fdata, 3);
+        NSLog(@"the sum of the fraction array is : %d/%d", sum.numerator, sum.denominator);
 
         Calculator *calc = [[Calculator alloc] init];
         [calc setAccumulator:0];
@@ -95,6 +119,44 @@ int main(int argc, const char * argv[]) {
         [c3 print];
 
 
+        float data[10];
+
+        unsigned int index = 0;
+        for (; index < 10; index++) {
+            data[index] = rand() % 100 / 3.3;
+        }
+
+        float avg = calculateAvg(data, 10);
+        NSLog(@"the average is : %.2f", avg);
+
+        struct data
+        {
+            int year;
+            int month;
+            int day;
+        };
+
+        typedef struct data Date;
+        Date todaysDate = {2016, 9, 10};
+        NSLog(@"the date is : %d/%d/%d", todaysDate.year, todaysDate.month, todaysDate.day);
+
+        MyDate *myDate = [MyDate new];
+        [myDate dateUpdate:2016 andMonth:3 andDay:5];
+        [myDate print];
+
+        MyDate *myDate2 = [[MyDate alloc] initWithYear:2034 andMonth:12 andDay:12];
+        [myDate2 print];
+
+
+        void (^exchangeInt)(int *, int *) = ^(int *d1, int *d2){
+            int t = *d1;
+            *d1 = *d2;
+            *d2 = t;
+        };
+
+        int d1 = 3, d2 = 9;
+        NSLog(@"before d1 = %d, d2 = %d; after d1 = %d, d2 = %d", d1, d2, (exchangeInt(&d1, &d2), d1), d2);
+        
     }
     return 0;
 }
