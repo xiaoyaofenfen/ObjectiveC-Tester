@@ -12,8 +12,8 @@
 
 @property int year, month, day;
 
--(id) init;
--(id) initWithYear: (int) theYear andMonth: (int) theMonth andDay: (int) theDay;
+-(instancetype) init;
+-(instancetype) initWithYear: (int) theYear andMonth: (int) theMonth andDay: (int) theDay;
 
 
 -(MyDate*) dateUpdate: (int) theYear andMonth: (int) theMonth andDay: (int) theDay;

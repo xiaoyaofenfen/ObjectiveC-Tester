@@ -14,6 +14,9 @@
 #import "Complex.h"
 #import "FunctionLib.h"
 #import "MyDate.h"
+#import "AddressCard.h"
+#import "AddressBook.h"
+#import "FileRelatedTest.h"
 
 Fraction* sumOfFraction(Fraction **data, int count)
 {
@@ -156,6 +159,27 @@ int main(int argc, const char * argv[]) {
 
         int d1 = 3, d2 = 9;
         NSLog(@"before d1 = %d, d2 = %d; after d1 = %d, d2 = %d", d1, d2, (exchangeInt(&d1, &d2), d1), d2);
+
+        NSLog(@"the size fo char is : %lu, and unichar is :%lu", sizeof(char), sizeof(unichar));
+
+
+        NSLog(@"------------------ address book --------------------");
+        AddressCard *card1 = [[AddressCard alloc] initName:@"liangfen" andEmail:@"lf@is.com"];
+        [card1 print];
+        AddressCard *card2 = [[AddressCard alloc] initName:@"lf1206" andEmail:@"lf@qq.com"];
+
+        AddressBook *adBook = [[AddressBook alloc] initWithName:@"lf\'book"];
+        [adBook addCard:card1];
+        [adBook addCard:card2];
+        [adBook list];
+
+        NSLog(@"find the card: %@", [adBook lookup:@"lf1206"]);
+
+        [adBook sort];
+        [adBook list];
+
+        FileRelatedTest *fileTest = [FileRelatedTest new];
+        [fileTest runTest];
         
     }
     return 0;
