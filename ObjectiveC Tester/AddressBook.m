@@ -27,6 +27,15 @@
     return [self initWithName:@"NoName"];
 }
 
+- (id) copyWithZone:(NSZone *)zone
+{
+    id newAdBook = [[[self class] allocWithZone:zone] init];
+    [newAdBook setName:self.bookName];
+    [newAdBook setBook:[book copy]];
+
+    return newAdBook;
+}
+
 -(void) addCard: (AddressCard *) card
 {
     [book addObject:card];

@@ -10,6 +10,7 @@
 		8F1D9F1C1D8BE785003D7401 /* FileRelatedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D9F1B1D8BE785003D7401 /* FileRelatedTest.m */; };
 		8F4243261D8AA53D008C2A5B /* FunctionLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F4243241D8AA53D008C2A5B /* FunctionLib.c */; };
 		8F4243291D8AC83E008C2A5B /* MyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4243281D8AC83E008C2A5B /* MyDate.m */; };
+		8F4A54431D8C497800CB5E43 /* CopyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A54421D8C497800CB5E43 /* CopyTest.m */; };
 		8F5E5E571D748800009A5196 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E5E561D748800009A5196 /* Calculator.m */; };
 		8F754A521D7728A200F2935D /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F754A511D7728A200F2935D /* Complex.m */; };
 		8F78919D1D8B803200119676 /* AddressCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F78919C1D8B803200119676 /* AddressCard.m */; };
@@ -39,6 +40,8 @@
 		8F4243251D8AA53D008C2A5B /* FunctionLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionLib.h; sourceTree = "<group>"; };
 		8F4243271D8AC83E008C2A5B /* MyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDate.h; sourceTree = "<group>"; };
 		8F4243281D8AC83E008C2A5B /* MyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDate.m; sourceTree = "<group>"; };
+		8F4A54411D8C497800CB5E43 /* CopyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyTest.h; sourceTree = "<group>"; };
+		8F4A54421D8C497800CB5E43 /* CopyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyTest.m; sourceTree = "<group>"; };
 		8F5E5E551D748800009A5196 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		8F5E5E561D748800009A5196 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		8F754A501D7728A200F2935D /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				8F78919C1D8B803200119676 /* AddressCard.m */,
 				8F78919E1D8B859500119676 /* AddressBook.h */,
 				8F78919F1D8B859500119676 /* AddressBook.m */,
+				8F4A54411D8C497800CB5E43 /* CopyTest.h */,
+				8F4A54421D8C497800CB5E43 /* CopyTest.m */,
 				8F4243281D8AC83E008C2A5B /* MyDate.m */,
 				8F4243241D8AA53D008C2A5B /* FunctionLib.c */,
 				8F4243251D8AA53D008C2A5B /* FunctionLib.h */,
@@ -170,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4A54431D8C497800CB5E43 /* CopyTest.m in Sources */,
 				8F754A521D7728A200F2935D /* Complex.m in Sources */,
 				8F5E5E571D748800009A5196 /* Calculator.m in Sources */,
 				8F79B4341D850E620057D54C /* FractionComparison.m in Sources */,
@@ -271,6 +277,7 @@
 		8F837B731D73249E00726CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -278,6 +285,7 @@
 		8F837B741D73249E00726CDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

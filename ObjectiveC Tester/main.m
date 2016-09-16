@@ -17,6 +17,7 @@
 #import "AddressCard.h"
 #import "AddressBook.h"
 #import "FileRelatedTest.h"
+#import "CopyTest.h"
 
 Fraction* sumOfFraction(Fraction **data, int count)
 {
@@ -86,6 +87,7 @@ int main(int argc, const char * argv[]) {
               [frac1 isLessThanOrEqualTo:fcm]);
 
         NSLog(@"the size of Fraction is: %lu", sizeof(frac1));
+        //NSLog(@"the retainCount of the frac1 is : %lu", [frac1 retainCount]);
 
 
         Fraction *fdata[3] = {frac1, frac2, fracResult};
@@ -180,6 +182,9 @@ int main(int argc, const char * argv[]) {
 
         FileRelatedTest *fileTest = [FileRelatedTest new];
         [fileTest runTest];
+
+        CopyTest *cpTest = [CopyTest new];
+        [cpTest runTest];
         
     }
     return 0;
