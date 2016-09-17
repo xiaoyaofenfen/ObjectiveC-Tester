@@ -53,4 +53,25 @@
 {
     return [name compare:obj.name];
 }
+
+-(id) copyWithZone:(NSZone *)zone
+{
+    AddressCard *card = [[AddressCard allocWithZone:zone] init];
+    [card setName:self.name andEmail:self.email];
+    return card;
+}
+
+-(void) encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"AddressCard.Name"];
+    [aCoder encodeObject:self.email forKey:@"AddressCard.Email"];
+}
+
+-(instancetype) initWithCoder:(NSCoder *)aDecoder
+{
+    self.name = [aDecoder decodeObjectForKey:@"AddressCard.Name"];
+    self.email = [aDecoder decodeObjectForKey:@"AddressCard.Email"];
+    return self;
+}
+
 @end

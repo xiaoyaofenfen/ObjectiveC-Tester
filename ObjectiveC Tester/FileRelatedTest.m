@@ -22,5 +22,10 @@
     }
 
     NSLog(@"the home dir of the Mac: %@", NSHomeDirectory());
+
+    [attrs writeToFile:@"/Users/liangfen/Downloads/test.xml" atomically:YES];
+
+    NSDictionary *plists = [NSDictionary dictionaryWithContentsOfFile:@"/Users/liangfen/Library/Preferences/com.apple.iPod.plist"];
+    NSLog(@"%@", plists);
 }
 @end

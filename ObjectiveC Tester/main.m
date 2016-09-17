@@ -168,6 +168,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"------------------ address book --------------------");
         AddressCard *card1 = [[AddressCard alloc] initName:@"liangfen" andEmail:@"lf@is.com"];
         [card1 print];
+
+        [NSKeyedArchiver archiveRootObject:card1 toFile:@"/Users/liangfen/Downloads/adbook.xml"];
+        AddressCard *cardDuplicate = [NSKeyedUnarchiver unarchiveObjectWithFile:@"/Users/liangfen/Downloads/adbook.xml"];
+        NSLog(@"The duplicate object equal: %@", card1 == cardDuplicate ? @"YES" : @"NO");
+        [cardDuplicate print];
+
         AddressCard *card2 = [[AddressCard alloc] initName:@"lf1206" andEmail:@"lf@qq.com"];
 
         AddressBook *adBook = [[AddressBook alloc] initWithName:@"lf\'book"];

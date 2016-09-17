@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AddressCard : NSObject
+@interface AddressCard : NSObject<NSCopying, NSCoding>
 
 @property(copy, nonatomic) NSString *name, *email;
 
